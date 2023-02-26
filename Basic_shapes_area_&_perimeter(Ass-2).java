@@ -9,32 +9,24 @@ import java.util.*;
 
 class declaration {
 
-    double triangle;
-    double rectangle;
-    double circle;
-    double side1;
-    double side2;
-    double base;
-    double length;
-    double width;
-    double radius;
+    double triangle,rectangle, circle, side1, side2, base, length, width, radius;
 
-    declaration(double side1, double side2, double base) {
+    declaration(double sd1, double sd2, double bs) {
 
-        this.side1 = side1;
-        this.side2 = side2;
-        this.base = base;
+        side1 = sd1;
+        side2 = sd2;
+        base = bs;
         System.out.printf("\n Traingle created successfully \n ");
     }
 
-    declaration(double length, double width) {
-        this.length = length;
-        this.width = width;
+    declaration(double lnth, double wdth) {
+        length = lnth;
+        width = wdth;
         System.out.printf("\n Rectangle created successfully \n ");
     }
 
-    declaration(double radius) {
-        this.radius = radius;
+    declaration(double rds) {
+        radius = rds;
         System.out.printf("\n Circle created successfully \n ");
     }
 
@@ -127,5 +119,6 @@ class shape {
                     break;
             }
         }
+    sc.close();
     }
 }
