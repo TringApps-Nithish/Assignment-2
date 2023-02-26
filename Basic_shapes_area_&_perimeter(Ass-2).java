@@ -10,24 +10,27 @@ import java.util.*;
 class declaration {
 
     double triangle,rectangle, circle, side1, side2, base, length, width, radius;
-
-    declaration(double sd1, double sd2, double bs) {
+    String s;
+    declaration(double sd1, double sd2, double bs,String shp) {
 
         side1 = sd1;
         side2 = sd2;
         base = bs;
-        System.out.printf("\n Traingle created successfully \n ");
+        s=shp;
+        System.out.printf("\n "+s+" created successfully \n ");
     }
 
-    declaration(double lnth, double wdth) {
+    declaration(double lnth, double wdth,String shp) {
         length = lnth;
         width = wdth;
-        System.out.printf("\n Rectangle created successfully \n ");
+        s=shp;
+        System.out.printf("\n "+s+" created successfully \n ");
     }
 
-    declaration(double rds) {
+    declaration(double rds,String shp) {
         radius = rds;
-        System.out.printf("\n Circle created successfully \n ");
+        s=shp;
+        System.out.printf("\n "+s+" created successfully \n ");
     }
 
     double area(double base, float height) {
@@ -85,7 +88,7 @@ class shape {
                     float length = sc.nextFloat();
                     System.out.printf(" Enter the Hypotenuse : ");
                     double Hypotenuse = sc.nextDouble();
-                    declaration ob = new declaration(base ,length , Hypotenuse);
+                    declaration ob = new declaration(base ,length , Hypotenuse,"Triangle");
                     System.out.printf("\n Area of Triangle : " + ob.area(base, length));
                     System.out.printf("\n Perimeter of Tri angle : " + ob.perimeter(base ,length , Hypotenuse));
                 }
@@ -96,7 +99,7 @@ class shape {
                     double length = sc.nextDouble();
                     System.out.printf(" Enter the Width Value : ");
                     double width = sc.nextDouble();
-                    declaration ob = new declaration(length, width);
+                    declaration ob = new declaration(length, width,"Rectangle");
                     System.out.printf("\n Area of Rectangle : " + ob.area(length, width));
                     System.out.printf("\n Perimeter of Rectangle : " + ob.perimeter(length, width));
                 }
@@ -105,7 +108,7 @@ class shape {
                 case 3: {
                     System.out.printf("\n Enter the Radius Value : ");
                     double radius = sc.nextDouble();
-                    declaration ob = new declaration(radius);
+                    declaration ob = new declaration(radius,"Circle");
                     System.out.printf("\n Area of Circle : " + ob.area(radius));
                     System.out.printf("\n Perimeter of Circle : " + ob.perimeter(radius));
                 }
